@@ -1,0 +1,20 @@
+SinglyLinkedListNode* mergeLists(SinglyLinkedListNode* headA, SinglyLinkedListNode* headB) {
+     if (headA == NULL) {
+      return headB;
+    } 
+    else if (headB == NULL) {
+      return headA;
+    } 
+    else {
+      if (headA->data <= headB->data) {
+          headA->next = mergeLists(headA->next, headB);
+          
+          return headA;
+      } 
+        else {
+          headB->next = mergeLists(headA, headB->next);
+          return headB;
+        }
+  }
+    
+}
