@@ -1,0 +1,12 @@
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+     SinglyLinkedListNode* NewNode = new SinglyLinkedListNode(data); 
+    if ( llist == nullptr ) 
+    { 
+        llist = NewNode; 
+        return llist; 
+    } 
+    else {
+        NewNode->next = llist; 
+        return NewNode; 
+    }
+}
