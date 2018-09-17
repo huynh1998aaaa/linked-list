@@ -1,0 +1,21 @@
+SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* head, int position) 
+{
+    SinglyLinkedListNode* newHead = head; 
+    SinglyLinkedListNode* pHead = head; 
+    int dem = 0; 
+    while (dem < position) { 
+        dem++; 
+        pHead = head; 
+        head = head->next;
+    } 
+    pHead->next = head->next; 
+    if ( position == 0 ) 
+    { 
+        newHead = head->next; 
+    } 
+    delete head; 
+    return newHead;
+
+
+
+}
