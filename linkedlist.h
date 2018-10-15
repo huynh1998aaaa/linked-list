@@ -104,4 +104,10 @@ public:
 		return size;
 	}
 };
+T operator [](int id){
+		Node<T>* prev;
+		if( id < size )
+			prev = find(id);
+		return prev->val;
+	}
 #endif
